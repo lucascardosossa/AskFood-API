@@ -1,11 +1,11 @@
 {
-  "name": "chegou-pizza-api",
-  "version": "1.0.0",
+  "name": "node-mysql",
+  "version": "0.0.1",
   "description": "api chegou pizza",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "nodemon server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,13 +13,9 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.15.2"
-  },
-  
-  "name": "node-mysql",
-  "version": "0.0.1",
-  "dependencies": {
+    "bookshelf": "^0.10.3",
     "express": "^4.10.6",
+    "knex": "^0.13.0",
     "mysql": "^2.5.4"
   }
 }
