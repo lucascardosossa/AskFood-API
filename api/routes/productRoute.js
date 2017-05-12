@@ -1,5 +1,8 @@
 'use strict';
-module.exports = function(app) {
-	var product = require('../controllers/productController');
-  	app.route('/product').get(product.list);
-};
+var express = require('express')
+    , router = express.Router();
+var product = require('../controllers/productController');
+
+router.get('/', product.list);
+
+module.exports = router;

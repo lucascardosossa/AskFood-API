@@ -5,8 +5,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-var routes = require('./api/routes/userRoutes');
-routes(app);
+var routes = require('./api/routes/indexRoute');
+app.use('/askfood', routes);
 
 app.listen(port);
 console.log('ready on: ' + port);
