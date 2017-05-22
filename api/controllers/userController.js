@@ -1,5 +1,5 @@
 'use strict';
-var User = require('../models/userModel')
+var User = require('../models/userModel');
 
 exports.list = function(req, res) {
     User.fetchAll().then(function (collection) {

@@ -6,6 +6,7 @@ var express = require('express')
 
 router.use('/user', require('./userRoute'));
 router.use('/product', require('./productRoute'));
+router.use('/item', require('./itemRoute'));
 
 router.get('/', function (req, res) {
     res.send('Home page')

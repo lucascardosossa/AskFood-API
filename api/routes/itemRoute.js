@@ -1,5 +1,9 @@
 'use strict';
-module.exports = function(app) {
-	var item = require('../controllers/itemController');
-  	app.route('/item').get(item.list);
-};
+var express = require('express')
+    , router = express.Router();
+var item = require('../controllers/itemController');
+
+router.get('/', item.list);
+router.post('/byProduct', item.byProduct);
+
+module.exports = router;
