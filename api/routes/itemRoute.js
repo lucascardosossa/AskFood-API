@@ -4,6 +4,6 @@ var express = require('express')
 var item = require('../controllers/itemController');
 
 router.get('/', item.list);
-router.post('/byProduct', item.byProduct);
+router.get('/byProduct/:product_id', item.byProduct);
 
 module.exports = router;

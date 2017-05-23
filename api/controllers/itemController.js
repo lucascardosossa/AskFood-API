@@ -10,7 +10,7 @@ exports.list = function(req, res) {
 };
 
 exports.byProduct = function (req, res) {
-    Item.where('product_id', req.body.product_id).fetchAll().then(function (collection) {
+    Item.where('product_id', req.params.product_id).fetchAll().then(function (collection) {
         res.json(collection.toJSON());
     }).catch(function (err) {
         res.status(500).json({error: true, data: {message: err.message}});
