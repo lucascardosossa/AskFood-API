@@ -17,3 +17,13 @@ exports.login = function(req,res){
     });
 };
 
+exports.signup = function (req, res) {
+    User.forge({name : req.body.name, password : req.body.password, email : req.body.email}).save()
+        .then(function (collection) {
+            res.json({error: false, data: collection.toJSON()});
+        }).catch(function (err) {
+        res.status(500).json({error: true, data: {message: err.message}});
+    });
+
+};
+
